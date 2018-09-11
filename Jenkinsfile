@@ -74,6 +74,9 @@ pipeline {
             container('maven') {
               sh 'jx step changelog --version v\$(cat ../../VERSION)'
 
+              sh "jx --version"
+              sh "jx version"
+                
               // release the helm chart
               sh 'jx step helm release'
 
