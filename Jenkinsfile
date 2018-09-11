@@ -75,7 +75,7 @@ pipeline {
               sh 'jx step changelog --version v\$(cat ../../VERSION)'
 
               sh "jx --version"
-              sh "jx version"
+              sh "jx version -b"
                 
               // release the helm chart
               sh 'jx step helm release'
